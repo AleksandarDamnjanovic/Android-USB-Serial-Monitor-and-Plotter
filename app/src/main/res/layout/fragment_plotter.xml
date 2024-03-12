@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Plotter">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Serial plotter"
+        android:padding="10dp"
+        android:layout_gravity="left"
+        android:gravity="left"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"/>
+
+        <LinearLayout
+            android:layout_gravity="bottom"
+            android:baselineAligned="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <EditText
+                android:maxLines="3"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="15dp"
+                android:gravity="bottom"
+                android:padding="5dp"
+                android:layout_weight="4"
+                android:id="@+id/plotterSendData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+                <Button
+                    android:background="@drawable/tab_selected"
+                    android:id="@+id/plotterSendButton"
+                    android:baselineAligned="true"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send"
+                    android:textSize="13dp"
+                    android:layout_weight="2"/>
+
+        </LinearLayout>
+
+</LinearLayout>
+
+</FrameLayout>
